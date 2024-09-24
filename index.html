@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinária AuMiau</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: rgba(255, 255, 255, 0.7);
+            position: relative;
+            color: black;
+        }
+
+        .background-image {
+            background-image: url('https://imgur.com/VLhDijL.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .circular-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid rgb(65, 226, 65);
+            box-shadow: 0 0 0 10px rgb(199, 10, 105);
+        }
+
+        .bottom-image {
+            width: 200px;
+            height: auto;
+        }
+
+        .au {
+            color: rgb(199, 10, 105);
+        }
+
+        .miau {
+            color: rgb(65, 226, 65);
+        }
+
+        .btn-primary {
+            background-color: green;
+            border-color: green;
+        }
+
+        .btn-primary:hover {
+            background-color: darkgreen;
+            border-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://imgur.com/rFdTDky.jpg" alt="Logo da Clínica" class="circular-image">
+        </div>
+        
+        <h1 class="mt-5">Bem-vindo à nossa Clínica Veterinária <span class="au">Au</span><span class="miau">Miau</span>!</h1>
+        <p>Oferecemos os melhores cuidados para seu animal de estimação. Atendimento domiciliar sob agendamento.</p>
+        
+        <h2>Entre em contato conosco!</h2>
+        <form action="/contato" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Whatsapp:</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" required>
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" class="form-control" id="cidade" name="cidade" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        <div class="image-container">
+            <img src="https://imgur.com/MGUx6Zx.jpg" alt="Imagem na parte inferior" class="bottom-image">
+        </div>
+    </div>
+</body>
+</html>
